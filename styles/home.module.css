@@ -39,11 +39,14 @@
   padding: 0;
 }
 
-.linkBox > li {
+.linkBox > li,
+.article > a {
   padding: 0.5em;
   transition: all 150ms;
+  cursor: pointer;
 }
-.linkBox > li:hover {
+.linkBox > li:hover,
+.article > a:hover {
   background-color: #1a1c1a;
   color: #f3dfc1;
   border-radius: 0.5em;
