@@ -6,9 +6,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -28,10 +28,12 @@ jobs:
       - name: Install and Build 🔧
         env:
           NEXT_PUBLIC_BASE: /the-free-times
+          NEXT_PUBLIC_ASSET: /the-free-times
         run: |
           npm ci
           npm run build
           npm run export
+          touch ./out/.nojekyll
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.7

@@ -14,7 +14,10 @@ const Loading = () => (
       alignItems: "center",
     }}
   >
-    <img src="/rocket.gif" alt="loading" />
+    <img
+      src={process.env.NEXT_PUBLIC_ASSET || "" + "/rocket.gif"}
+      alt="loading"
+    />
     loading the paper
   </div>
 );
