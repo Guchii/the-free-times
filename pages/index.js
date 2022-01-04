@@ -4,7 +4,7 @@ import { v4 } from "uuid";
 import styles from "../styles/index.module.css";
 import { useEffect, useState } from "react";
 
-const prefix = process.env.NEXT_PUBLIC_ASSET + "/" || "";
+const prefix = process.env.NEXT_PUBLIC_ASSET || "";
 
 const Loading = () => (
   <div
@@ -16,7 +16,7 @@ const Loading = () => (
       alignItems: "center",
     }}
   >
-    <img src={prefix + "rocket.gif"} alt="loading" />
+    <img src={prefix + "/rocket.gif"} alt="loading" />
     loading the paper
   </div>
 );
