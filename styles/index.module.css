@@ -1,0 +1,19 @@
+.article {
+}
+
+.colSpan {
+  grid-column: span 2;
+}
+
+.rowspan {
+  grid-row: span 2;
+}
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem;
+  gap: 1rem;
+}
