@@ -44,7 +44,12 @@ const Grid = ({ data }) => {
         <div className={styles.article} key={v4()}>
           <h2>{dat.title}</h2>
           <p>{dat.content}</p>
-          <a href={dat.readMoreUrl} target="_blank" rel="noreferrer">
+          <a
+            href={dat.readMoreUrl}
+            target="_blank"
+            rel="noreferrer"
+            className={styles.button}
+          >
             Read more...
           </a>
         </div>

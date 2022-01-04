@@ -15,12 +15,42 @@ function MyApp({ Component, pageProps }) {
           <i>Free to read e-paper with concise articles and many categories</i>
         </p>
         <ul className={styles.linkBox}>
-          <li onClick={() => setCategory("technology")}>technology</li>
-          <li onClick={() => setCategory("national")}>national</li>
-          <li onClick={() => setCategory("business")}>business</li>
-          <li onClick={() => setCategory("sports")}>sports</li>
-          <li onClick={() => setCategory("world")}>world</li>
-          <li onClick={() => setCategory("politics")}>politics</li>
+          <li
+            className={category === "technology" ? styles.active : undefined}
+            onClick={() => setCategory("technology")}
+          >
+            technology
+          </li>
+          <li
+            className={category === "national" ? styles.active : undefined}
+            onClick={() => setCategory("national")}
+          >
+            national
+          </li>
+          <li
+            className={category === "business" ? styles.active : undefined}
+            onClick={() => setCategory("business")}
+          >
+            business
+          </li>
+          <li
+            className={category === "sports" ? styles.active : undefined}
+            onClick={() => setCategory("sports")}
+          >
+            sports
+          </li>
+          <li
+            className={category === "world" ? styles.active : undefined}
+            onClick={() => setCategory("world")}
+          >
+            world
+          </li>
+          <li
+            className={category === "politics" ? styles.active : undefined}
+            onClick={() => setCategory("politics")}
+          >
+            politics
+          </li>
         </ul>
         <hr />
       </header>
@@ -47,5 +77,4 @@ function MyApp({ Component, pageProps }) {
     </div>
   );
 }
-
 export default MyApp;

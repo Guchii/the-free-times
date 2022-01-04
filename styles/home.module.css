@@ -2,6 +2,7 @@
   font-size: 5.625rem;
   line-height: 4.375rem;
   margin: 0.325em;
+  margin-top: 64px;
 }
 .header > p {
   font-size: 1.125rem;
@@ -37,16 +38,17 @@
   gap: 1em;
   list-style-type: none;
   padding: 0;
+  margin-bottom: 30px;
 }
 
 .linkBox > li,
-.article > a {
+.button {
   padding: 0.5em;
   transition: all 150ms;
   cursor: pointer;
 }
 .linkBox > li:hover,
-.article > a:hover {
+.active {
   background-color: #1a1c1a;
   color: #f3dfc1;
   border-radius: 0.5em;
