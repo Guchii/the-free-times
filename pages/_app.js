@@ -7,7 +7,7 @@ import { useState } from "react";
 function MyApp({ Component, pageProps }) {
   const [category, setCategory] = useState("technology");
   return (
-    <div>
+    <div style={{ width: "100vw" }}>
       {/* header */}
       <header className={styles.header}>
         <h1>THE FREE TIMES</h1>
@@ -54,7 +54,7 @@ function MyApp({ Component, pageProps }) {
         </ul>
         <hr />
       </header>
-      <main>
+      <main style={{ overflow: "hidden" }}>
         <Component {...pageProps} {...{ category, setCategory }} />
       </main>
       <footer className={styles.footer}>

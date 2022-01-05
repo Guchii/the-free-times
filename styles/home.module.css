@@ -39,6 +39,7 @@
   list-style-type: none;
   padding: 0;
   margin-bottom: 30px;
+  flex-wrap: wrap;
 }
 
 .linkBox > li,
