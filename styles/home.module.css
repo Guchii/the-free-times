@@ -4,6 +4,7 @@
   margin: 0.325em;
   margin-top: 64px;
 }
+
 .header > p {
   font-size: 1.125rem;
   line-height: 1rem;
@@ -12,8 +13,14 @@
 
 .header {
   text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
 }
-
+.header img {
+  width: 60%;
+  margin: 2em;
+}
 .maxWidth {
   max-width: 1400px;
 }
@@ -53,4 +60,8 @@
   background-color: #1a1c1a;
   color: #f3dfc1;
   border-radius: 0.5em;
+}
+
+.active {
+  font-weight: bold;
 }

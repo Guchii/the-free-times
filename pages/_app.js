@@ -10,7 +10,8 @@ function MyApp({ Component, pageProps }) {
     <div style={{ width: "100vw" }}>
       {/* header */}
       <header className={styles.header}>
-        <h1>THE FREE TIMES</h1>
+        {/* <h1>THE FREE TIMES</h1> */}
+        <img src="/logo.svg" alt="THE FREE TIMES" />
         <p>
           <i>Free to read e-paper with concise articles and many categories</i>
         </p>
