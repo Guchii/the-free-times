@@ -2,7 +2,7 @@ import Head from "next/head";
 import styles from "../styles/home.module.css";
 import GithubCorner from "react-github-corner";
 import "../styles/globals.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function MyApp({ Component, pageProps }) {
   const [category, setCategory] = useState("technology");
@@ -53,6 +53,10 @@ function MyApp({ Component, pageProps }) {
             politics
           </li>
         </ul>
+        <div className={styles.misc}>
+          <Clock />
+          <Covid />
+        </div>
         <hr />
       </header>
       <main style={{ overflow: "hidden" }}>
@@ -78,4 +82,23 @@ function MyApp({ Component, pageProps }) {
     </div>
   );
 }
+
+const Clock = () => {
+  const [time, setTime] = useState("loading time");
+  useEffect(() => {
+    setInterval(() => {
+      const date = new Date();
+      setTime(date.toString());
+    }, 1000);
+  }, []);
+  return (
+    <>
+      <span>{time}</span>
+    </>
+  );
+};
+const Covid = () => {
+  useEffect(() => {}, []);
+  return null;
+};
 export default MyApp;
