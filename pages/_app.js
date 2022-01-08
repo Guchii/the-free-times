@@ -1,8 +1,11 @@
+/* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
 import styles from "../styles/home.module.css";
 import GithubCorner from "react-github-corner";
 import "../styles/globals.css";
 import { useEffect, useState } from "react";
+
+const prefix = process.env.NEXT_PUBLIC_ASSET || "";
 
 function MyApp({ Component, pageProps }) {
   const [category, setCategory] = useState("technology");
@@ -11,7 +14,7 @@ function MyApp({ Component, pageProps }) {
       {/* header */}
       <header className={styles.header}>
         {/* <h1>THE FREE TIMES</h1> */}
-        <img src="/logo.svg" alt="THE FREE TIMES" />
+        <img src={prefix + "/logo.svg"} alt="THE FREE TIMES" />
         <p>
           <i>Free to read e-paper with concise articles and many categories</i>
         </p>
