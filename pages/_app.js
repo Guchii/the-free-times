@@ -11,9 +11,7 @@ function MyApp({ Component, pageProps }) {
   const [category, setCategory] = useState("technology");
   return (
     <div style={{ width: "100vw" }}>
-      {/* header */}
       <header className={styles.header}>
-        {/* <h1>THE FREE TIMES</h1> */}
         <img src={prefix + "/logo.svg"} alt="THE FREE TIMES" />
         <p>
           <i>Free to read e-paper with concise articles and many categories</i>
@@ -60,7 +58,7 @@ function MyApp({ Component, pageProps }) {
           <Clock />
           <Covid />
         </div>
-        <hr />
+        <div></div>
       </header>
       <main style={{ overflow: "hidden" }}>
         <Component {...pageProps} {...{ category, setCategory }} />
