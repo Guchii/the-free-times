@@ -32,9 +32,8 @@ const Loading = () => (
 );
 
 export default function Home() {
-  const { category, setCategory } = useContext(AppContext);
+  const { category } = useContext(AppContext);
   const [arr, setArr] = useState([]);
-  const [loading, setLoading] = useState(true);
   const query = useQuery(
     ["news", category],
     async () => {
@@ -42,12 +41,14 @@ export default function Home() {
         data: { data },
         status,
       } = await axios.get(
-        `https://inshortsapi.vercel.app/news?category=${category}`
-      );
-      return data;
+        `https://inshortsapi.vercel.app/news?category=${category}`,
+        // `/api/news?category=${category}`
+        );
+        return data;
     },
     {
       onSuccess: (data) => {
+        console.log("successful",data);
         setArr(data);
       },
     }
